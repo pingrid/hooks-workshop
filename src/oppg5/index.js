@@ -1,19 +1,19 @@
 import React from 'react';
-import Oppg4 from './Oppg4';
+import Oppg5 from './Oppg5';
 
-function Oppg4Wrapper() {
+function Oppg5Wrapper() {
   return (
     <div>
-      <h1>Oppgave 4</h1>
+      <h1>Oppgave 5</h1>
       <pre>
         Bytt ut lokal tilstand (useState) til å bruke global tilstand
         (useContext(StateContext))
       </pre>
       <hr style={{ marginBottom: 50 }} />
 
-      <Oppg4 />
+      <Oppg5 />
     </div>
   );
 }
 
-export default Oppg4Wrapper;
+export default Oppg5Wrapper;

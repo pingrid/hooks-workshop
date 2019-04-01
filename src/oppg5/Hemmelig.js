@@ -10,7 +10,7 @@ export default function Hemmelig() {
 
   return (
     <div style={{ marginTop: 50 }}>
-      <strong>Yay! Ser ut som du har klart oppgave 4</strong>
+      <strong>Yay! Ser ut som du har klart oppgave 5</strong>
       <br />
       {text}
     </div>

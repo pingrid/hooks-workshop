@@ -1,5 +1,5 @@
 /**
- * Oppgave 4
+ * Oppgave 5
  *
  * Bytt ut lokal tilstand (useState) til å bruke global tilstand (useContext(StateContext))
  */
@@ -7,7 +7,7 @@
 import React, { useState } from 'react';
 // import { StateContext } from "./StateContext";
 
-export default function Oppg4() {
+function Oppg5() {
   const [text, setText] = useState('');
 
   function handleTextChange(event) {
@@ -27,3 +27,5 @@ export default function Oppg4() {
     </div>
   );
 }
+
+export default Oppg5;
