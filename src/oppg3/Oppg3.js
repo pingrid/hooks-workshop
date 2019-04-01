@@ -5,7 +5,7 @@
  */
 
 import React from "react";
-import useStarshipFetcher from "./useStarshipFetcher";
+// import useStarshipFetcher from "./useStarshipFetcher";
 
 function Row({ label, value }) {
   return (
@@ -21,12 +21,12 @@ function Row({ label, value }) {
 }
 
 export default function Oppg3({ starshipId }) {
-  const { starship, loading, error } = useStarshipFetcher(starshipId);
-  // const { starship, loading, error } = {
-  //   starship: null,
-  //   loading: true,
-  //   error: false
-  // };
+  // const { starship, loading, error } = useStarshipFetcher(starshipId);
+  const { starship, loading, error } = {
+    starship: null,
+    loading: true,
+    error: false
+  };
 
   if (loading) {
     return <div>Laster...</div>;
