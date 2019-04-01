@@ -54,7 +54,7 @@ function App() {
   }
 
   return (
-    <StateProvider initialValue={''}>
+    <StateProvider>
       <div className="App">
         <header>
           <a href="/" onClick={event => handlePageChange(event, '')}>

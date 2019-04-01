@@ -2,8 +2,8 @@ import React, { createContext, useState } from 'react';
 
 export const StateContext = createContext();
 
-export function StateProvider({ initialValue, children }) {
-  const [state, setState] = useState(initialValue);
+export function StateProvider({ children }) {
+  const [state, setState] = useState('');
 
   return (
     <StateContext.Provider value={[state, setState]}>
