@@ -11,7 +11,7 @@ class Oppg1 extends Component {
     super(props);
 
     this.state = {
-      counter: props.defaultValue || 0,
+      counter: 0,
     };
   }
 
