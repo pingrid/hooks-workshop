@@ -3,8 +3,8 @@
  *
  * Lag en custom hook for å hente data om stjerneskip fra api-et
  *
- * valgfritt:
- * Lag en generell custom hook for å fetche data
+ * Ekstra:
+ * Lag en generisk data fetcher custom hook
  */
 
 import React from 'react';

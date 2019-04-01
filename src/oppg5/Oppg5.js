@@ -2,6 +2,10 @@
  * Oppgave 5
  *
  * Bytt ut lokal tilstand (useState) til å bruke context (useContext(StateContext))
+ *
+ * Ekstra:
+ * Endre StateContext-valuen til å være et objekt slik at den kan
+ * holde flere verdier enn kun en tekststreng
  */
 
 import React, { useState } from 'react';
