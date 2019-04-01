@@ -6,6 +6,7 @@ function Oppg1Wrapper() {
   return (
     <div>
       <h1>Oppgave 1</h1>
+      {/* eslint-disable-next-line */}
       <pre>
         Kompontenten `Oppg1` er en klassekomponent (🤮).{'\n'}Endre den slik at
         den blir en function component som bruker useState til å holde på
