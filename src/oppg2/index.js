@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import Oppg2 from "./Oppg2";
+import Oppg2 from './Oppg2';
 
 const persons = [
-  { name: "Luke Skywalker", id: 1 },
-  { name: "C-3PO", id: 2 },
-  { name: "R2-D2", id: 3 },
-  { name: "Darth Vader", id: 4 },
-  { name: "Leia Organa", id: 5 },
-  { name: "Obi-Wan Kenobi", id: 10 },
-  { name: "Chewbacca", id: 13 },
-  { name: "Han Solo", id: 14 }
+  { name: 'Luke Skywalker', id: 1 },
+  { name: 'C-3PO', id: 2 },
+  { name: 'R2-D2', id: 3 },
+  { name: 'Darth Vader', id: 4 },
+  { name: 'Leia Organa', id: 5 },
+  { name: 'Obi-Wan Kenobi', id: 10 },
+  { name: 'Chewbacca', id: 13 },
+  { name: 'Han Solo', id: 14 },
 ];
 
 export default function PersonSelector() {
@@ -23,6 +23,12 @@ export default function PersonSelector() {
   return (
     <div>
       <h1>Oppgave 2</h1>
+      <pre>
+        Del 1: Denne komponenten innholder en bug! Den må du fikse (uten å bruke
+        hooks){'\n\n'}Del 2: Gjør om komponenten til å bruke useState (lagre
+        person) og useEffect (fetch person)
+      </pre>
+      <hr style={{ marginBottom: 50 }} />
 
       {persons.map(person => {
         return (
@@ -31,11 +37,11 @@ export default function PersonSelector() {
             onClick={() => handlePersonClick(person)}
             style={{
               padding: 10,
-              cursor: "pointer",
+              cursor: 'pointer',
               border:
                 activePerson && activePerson.id === person.id
-                  ? "2px solid black"
-                  : "1px solid lightgray"
+                  ? '2px solid black'
+                  : '1px solid lightgray',
             }}
           >
             {person.name}

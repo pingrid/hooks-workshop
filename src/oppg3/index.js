@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import Oppg3 from "./Oppg3";
+import Oppg3 from './Oppg3';
 
 const starships = [
-  { name: "Death Star", id: 9 },
-  { name: "Millennium Falcon", id: 10 },
-  { name: "Y-wing", id: 11 },
-  { name: "X-wing", id: 12 },
-  { name: "Imperial shuttle", id: 22 },
-  { name: "Jedi starfighter", id: 48 },
-  { name: "Star Destroyer", id: 3 }
+  { name: 'Death Star', id: 9 },
+  { name: 'Millennium Falcon', id: 10 },
+  { name: 'Y-wing', id: 11 },
+  { name: 'X-wing', id: 12 },
+  { name: 'Imperial shuttle', id: 22 },
+  { name: 'Jedi starfighter', id: 48 },
+  { name: 'Star Destroyer', id: 3 },
 ];
 
 export default function StarshipSelector() {
@@ -22,6 +22,10 @@ export default function StarshipSelector() {
   return (
     <div>
       <h1>Oppgave 3</h1>
+      <pre>
+        Lag en custom hook for å hente data om stjerneskip fra Star Wars API-et
+      </pre>
+      <hr style={{ marginBottom: 50 }} />
 
       {starships.map(starship => {
         return (
@@ -30,11 +34,11 @@ export default function StarshipSelector() {
             onClick={() => handleStarshipClick(starship)}
             style={{
               padding: 10,
-              cursor: "pointer",
+              cursor: 'pointer',
               border:
                 activeStarship && activeStarship.id === starship.id
-                  ? "2px solid black"
-                  : "1px solid lightgray"
+                  ? '2px solid black'
+                  : '1px solid lightgray',
             }}
           >
             {starship.name}

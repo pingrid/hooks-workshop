@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { StateContext } from "./StateContext";
+import React, { useContext } from 'react';
+import { StateContext } from './StateContext';
 
 export default function Hemmelig() {
   const [text] = useContext(StateContext);

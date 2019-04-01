@@ -2,9 +2,12 @@
  * Oppgave 3
  *
  * Lag en custom hook for å hente data om stjerneskip fra api-et
+ *
+ * valgfritt:
+ * Lag en generell custom hook for å fetche data
  */
 
-import React from "react";
+import React from 'react';
 // import useStarshipFetcher from "./useStarshipFetcher";
 
 function Row({ label, value }) {
@@ -25,7 +28,7 @@ export default function Oppg3({ starshipId }) {
   const { starship, loading, error } = {
     starship: null,
     loading: true,
-    error: false
+    error: false,
   };
 
   if (loading) {

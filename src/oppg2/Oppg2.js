@@ -8,7 +8,7 @@
  * Gjør om komponenten til å bruke useState (lagre person) og useEffect (fetch person)
  */
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 function Row({ label, value }) {
   return (
@@ -32,7 +32,7 @@ export default class Oppg2 extends Component {
     super(props);
 
     this.state = {
-      person: null
+      person: null,
     };
   }
 
