@@ -4,6 +4,7 @@ import './App.css';
 import Oppg1 from './oppg1/';
 import Oppg2 from './oppg2';
 import Oppg3 from './oppg3';
+import Oppg4 from './oppg4';
 import Oppg5 from './oppg5/';
 
 import Hemmelig from './oppg5/Hemmelig';
@@ -25,6 +26,8 @@ function getContent(page) {
       return <Oppg2 />;
     case 'oppg3':
       return <Oppg3 />;
+    case 'oppg4':
+      return <Oppg4 />;
     case 'oppg5':
       return <Oppg5 />;
     default:
@@ -65,6 +68,9 @@ function App() {
           </a>
           <a href="oppg3" onClick={event => handlePageChange(event, 'oppg3')}>
             Oppgave 3
+          </a>
+          <a href="oppg4" onClick={event => handlePageChange(event, 'oppg4')}>
+            Oppgave 4
           </a>
           <a href="oppg5" onClick={event => handlePageChange(event, 'oppg5')}>
             Oppgave 5
