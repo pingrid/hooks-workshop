@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-import Oppg1 from './oppg1/';
+import Oppg1 from './oppg1';
 import Oppg2 from './oppg2';
 import Oppg3 from './oppg3';
 import Oppg4 from './oppg4';
-import Oppg5 from './oppg5/';
+import Oppg5 from './oppg5';
+import Oppg6 from './oppg6';
 
 import Hemmelig from './oppg5/Hemmelig';
 
@@ -30,6 +31,8 @@ function getContent(page) {
       return <Oppg4 />;
     case 'oppg5':
       return <Oppg5 />;
+    case 'oppg6':
+      return <Oppg6 />;
     default:
       return <div>Not found</div>;
   }
@@ -75,6 +78,11 @@ function App() {
           <a href="oppg5" onClick={event => handlePageChange(event, 'oppg5')}>
             Oppgave 5
           </a>
+          {page === 'oppg5' && (
+            <a href="oppg6" onClick={event => handlePageChange(event, 'oppg6')}>
+              Oppgave 6
+            </a>
+          )}
         </header>
 
         <div>{getContent(page)}</div>
