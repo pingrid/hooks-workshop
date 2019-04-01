@@ -6,7 +6,7 @@
 
 import React, { useState } from 'react';
 
-export default function Oppg4() {
+function Oppg4() {
   const [counter, setCounter] = useState(0);
 
   return (
@@ -17,3 +17,5 @@ export default function Oppg4() {
     </div>
   );
 }
+
+export default Oppg4;

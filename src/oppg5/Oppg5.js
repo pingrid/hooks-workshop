@@ -1,7 +1,7 @@
 /**
  * Oppgave 5
  *
- * Bytt ut lokal tilstand (useState) til å bruke global tilstand (useContext(StateContext))
+ * Bytt ut lokal tilstand (useState) til å bruke context (useContext(StateContext))
  */
 
 import React, { useState } from 'react';
@@ -21,7 +21,6 @@ function Oppg5() {
         type="text"
         value={text}
         onChange={handleTextChange}
-        multiple
         style={{ width: '100%', height: 50, fontSize: 20 }}
       />
     </div>

@@ -27,7 +27,7 @@ function getPersonUrl(personId) {
   return `https://swapi.co/api/people/${personId}/`;
 }
 
-export default class Oppg2 extends Component {
+class Oppg2 extends Component {
   constructor(props) {
     super(props);
 
@@ -73,3 +73,5 @@ export default class Oppg2 extends Component {
     );
   }
 }
+
+export default Oppg2;
