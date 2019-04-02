@@ -56,11 +56,11 @@ class Oppg2 extends Component {
     const { person } = this.state;
 
     if (!person) {
-      return <div className="Oppg2">Laster...</div>;
+      return <div>Laster...</div>;
     }
 
     return (
-      <div className="Oppg2">
+      <div>
         <table>
           <tbody>
             <Row label="Navn" value={person.name} />
