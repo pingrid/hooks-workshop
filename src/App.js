@@ -6,21 +6,21 @@ import Hemmelig from './oppg5/Hemmelig';
 import { StateProvider } from './oppg5/StateContext';
 
 function App() {
-  const [currentPage, handlePageChange] = useRouter();
+  const [currentRoute, handlePageChange] = useRouter();
 
   /**
    * Oppgave 3b (ekstra)
-   * Lag en custom hook som viser currentPage.title i document.title
+   * Lag en custom hook som viser currentRoute.title i document.title
    */
 
   return (
     <StateProvider>
       <div className="App">
         <Header
-          currentPath={currentPage.path}
+          currentPath={currentRoute.path}
           handlePageChange={handlePageChange}
         />
-        <div>{currentPage.content}</div>
+        <div>{currentRoute.content}</div>
         <Hemmelig />
       </div>
     </StateProvider>

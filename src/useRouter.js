@@ -7,7 +7,7 @@ import Oppg4 from './oppg4';
 import Oppg5 from './oppg5';
 import Oppg6 from './oppg6';
 
-const PAGES = {
+const ROUTES = {
   '/': {
     path: '/',
     title: 'Hjem',
@@ -50,29 +50,45 @@ const PAGES = {
   },
 };
 
-function getPage(path) {
-  return (
-    PAGES[path] || {
+function getRouteFromPath(path) {
+  if (ROUTES.hasOwnProperty(path)) {
+    return ROUTES[path];
+  } else {
+    return {
       path,
       title: '404',
       content: <div>sry mækk, not found</div>,
-    }
-  );
+    };
+  }
 }
 
 function useRouter() {
-  const [page, setPage] = useState(getPage(window.location.pathname));
+  const [currentRoute, setRoute] = useState(
+    getRouteFromPath(window.location.pathname)
+  );
 
   useEffect(() => {
-    window.history.pushState(null, page.title, page.path);
-  }, [page]);
+    function handler(event) {
+      setRoute(getRouteFromPath(window.location.pathname));
+    }
+
+    window.addEventListener('popstate', handler, false);
+    return () => window.removeEventListener('popstate', handler, false);
+  }, []);
 
   function handlePageChange(event) {
     event.preventDefault();
-    setPage(getPage(event.target.pathname));
+
+    const route = getRouteFromPath(event.target.pathname);
+    setRoute(route);
+
+    // only push state if it's anonther route
+    if (route !== currentRoute) {
+      window.history.pushState(null, route.title, route.path);
+    }
   }
 
-  return [page, handlePageChange];
+  return [currentRoute, handlePageChange];
 }
 
 export default useRouter;
