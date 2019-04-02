@@ -1,0 +1,14 @@
+.Oppg2 {
+  background-color: antiquewhite;
+  min-height: 100px;
+  animation: fadein 1s linear;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

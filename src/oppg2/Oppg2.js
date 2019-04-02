@@ -9,6 +9,7 @@
  */
 
 import React, { Component } from 'react';
+import './Oppg2.css';
 
 function Row({ label, value }) {
   return (
@@ -55,21 +56,23 @@ class Oppg2 extends Component {
     const { person } = this.state;
 
     if (!person) {
-      return <div>Laster...</div>;
+      return <div className="Oppg2">Laster...</div>;
     }
 
     return (
-      <table>
-        <tbody>
-          <Row label="Navn" value={person.name} />
-          <Row label="Født" value={person.birth_year} />
-          <Row label="Øyne" value={person.eye_color} />
-          <Row label="Kjønn" value={person.gender} />
-          <Row label="Hår" value={person.hair_color} />
-          <Row label="Høyde" value={person.height} />
-          <Row label="Vekt" value={person.mass} />
-        </tbody>
-      </table>
+      <div className="Oppg2">
+        <table>
+          <tbody>
+            <Row label="Navn" value={person.name} />
+            <Row label="Født" value={person.birth_year} />
+            <Row label="Øyne" value={person.eye_color} />
+            <Row label="Kjønn" value={person.gender} />
+            <Row label="Hår" value={person.hair_color} />
+            <Row label="Høyde" value={person.height} />
+            <Row label="Vekt" value={person.mass} />
+          </tbody>
+        </table>
+      </div>
     );
   }
 }
