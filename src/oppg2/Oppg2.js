@@ -8,7 +8,7 @@
  * Gjør om komponenten til å bruke useState (lagre person) og useEffect (fetch person)
  */
 
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import './Oppg2.css';
 
 function Row({ label, value }) {
@@ -28,53 +28,43 @@ function getPersonUrl(personId) {
   return `https://swapi.co/api/people/${personId}/`;
 }
 
-class Oppg2 extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      person: null,
-    };
-  }
+const Oppg2 = ({ personId }) => {
+  const [person, setPerson] = useState(null);
 
-  componentDidMount() {
-    this.fetchPerson();
-  }
+  useEffect(() => {
+    fetchPerson();
+  }, [personId]);
 
-  fetchPerson = () => {
-    const { personId } = this.props;
-
+  const fetchPerson = () => {
+    setPerson(null);
     const url = getPersonUrl(personId);
     fetch(url)
       .then(result => result.json())
       .then(json => {
-        this.setState({ person: json });
+        setPerson(json);
       });
   };
 
-  render() {
-    const { person } = this.state;
-
-    if (!person) {
-      return <div>Laster...</div>;
-    }
-
-    return (
-      <div>
-        <table>
-          <tbody>
-            <Row label="Navn" value={person.name} />
-            <Row label="Født" value={person.birth_year} />
-            <Row label="Øyne" value={person.eye_color} />
-            <Row label="Kjønn" value={person.gender} />
-            <Row label="Hår" value={person.hair_color} />
-            <Row label="Høyde" value={person.height} />
-            <Row label="Vekt" value={person.mass} />
-          </tbody>
-        </table>
-      </div>
-    );
+  if (!person) {
+    return <div>Laster...</div>;
   }
+
+  return (
+    <div>
+      <table>
+        <tbody>
+          <Row label="Navn" value={person.name} />
+          <Row label="Født" value={person.birth_year} />
+          <Row label="Øyne" value={person.eye_color} />
+          <Row label="Kjønn" value={person.gender} />
+          <Row label="Hår" value={person.hair_color} />
+          <Row label="Høyde" value={person.height} />
+          <Row label="Vekt" value={person.mass} />
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
 export default Oppg2;

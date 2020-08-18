@@ -9,7 +9,7 @@
  */
 
 import React, { useState } from 'react';
-// import { StateContext } from "./StateContext";
+import { StateContext } from "./StateContext";
 
 function Oppg5() {
   const [text, setText] = useState('');
